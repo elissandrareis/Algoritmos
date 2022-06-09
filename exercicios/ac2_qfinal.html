@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto</title>
+</head>
+
+<body>
+    <h2>Posto Estrela - Controle de Vendas</h2>
+
+    <div id="div_abertura" style="display: block;">
+        <h3>------------------Abertura do Posto------------------</h3>
+        Entre com o volume de Etanol do tanque:
+        <input id="ipt_etanol"> <br>
+        Entre com o volume de Gasolina do tanque:
+        <input id="ipt_gasolina"> <br>
+        <button onclick="abrir()">Abrir o Posto</button> <br>
+        <div id="div_msg_abertura"></div>
+    </div>
+
+    <div id="div_venda" style="display: none;">
+        <h3>-------Registro das Operações de venda do turno--------</h3>
+        Entre com o volume vendido:
+        <input id="ipt_venda">
+        Informe o produto vendido:
+        <select id="sel_produto">
+            <option value="s">--Selecione--</option>
+            <option value="e">etanol</option>
+            <option value="g">gasolina</option>
+        </select>
+        <button onclick="registrar()">Registrar a Venda</button>
+        <button onclick="encerrar()" style="background-color: red;">Encerrar o Turno</button>
+        <br><br>
+        <span id="span_msg"></span>
+    </div>
+</body>
+
+</html>

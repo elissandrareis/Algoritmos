@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprint</title>
+</head>
+<body>
+    <h1>Venha conferir quanto seu comércio poderá faturar.</h1>
+    Insira a sua <b>renda</b> mensal: <input id="ipt_renda" type="text">
+    <br>
+    Informe o número de <b>corredores</b> que seu comércio possui: <input id="ipt_corredor" type="text" >
+    <br>
+    Informe o número de <b>corredores</b> que utilizarão os <b>sensores</b>: <input id="ipt_sensor" type="text" >
+    <br>
+    <button id="bt_cal" onclick="cal()">Clique aqui para calcular</button>
+    <br>
+    <div id="msg" ></div>
+
+</body>
+</html>
+<script>
+    function cal() {
+        var novarenda = Number(ipt_renda.value * 0.3) + Number(ipt_renda.value)
+        var cadacorredor = ipt_renda.value / ipt_corredor.value
+        var corredorsens = novarenda / ipt_sensor.value
+
+        msg.innerHTML = `Sua renda mensal utilizando nossos serviços será de: <b style="color: rgb(141, 192, 65);">R$ ${novarenda.toFixed(2)}</b> <br>
+         Sua renda dividida entre os corredores sem o uso dos sensores é de: <b style="color: rgb(206, 177, 47);">R$ ${cadacorredor.toFixed(2)} </b> <br>
+         O valor gerado pelos corredores que estão com sensores é de <b style="color: rgb(206, 177, 47);">R$ ${corredorsens.toFixed(2)} </b> <br>
+         Seu comércio irá gerar <b style="color: green;">R$ ${novarenda.toFixed(2)}</b> por mês.<br>
+         Seu comércio irá gerar <b style="color: green;">R$ ${(novarenda * 6).toFixed(2)}</b> em seis meses.<br>
+         Seu comércio irá gerar <b style="color: green;">R$ ${(novarenda * 12).toFixed(2)}</b> em um ano. <br>`
+    }
+</script>

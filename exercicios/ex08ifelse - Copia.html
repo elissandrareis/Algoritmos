@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8 If Else</title>
+</head>
+<body>
+    
+    <h2>Verifique pra mim a quantidade de homens e mulheres no elevador por favor?</h2>
+
+    <input id="quantidade" placeholder="Quantidade de Homens">
+    <input id="peso" placeholder= "Quantidade de mulheres">
+    <button onclick="ligue()">Ligar elevador</button>
+    <div id="aperte"></div>
+
+
+</body>
+</html>
+<script>
+
+     function ligue(){
+         
+         var homens= quantidade.value * 90
+         var mulher= peso.value * 70
+         var calcular= Number (homens) + Number (mulher);
+        
+     if (calcular <500) {
+
+      
+
+
+aperte.innerHTML= `<span style="background-color: green;">Elevador vai se mover, pois está com ${calcular} kg</span>`}
+
+
+else { (calcular <= 500) 
+    
+
+aperte.innerHTML= `<span style="background-color: red;">Alguém precisa descer. Precisa perder ${calcular - 500} kg para mover o elevador</span>`;
+}
+
+
+     }
+      
+     
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercíio 9</title>
+</head>
+<body>
+    
+<h2>Futuro Próspero!</h2>
+
+<img src="https://thumbs.dreamstime.com/b/carteira-sem-o-dinheiro-na-m%C3%A3o-do-mec%C3%A2nico-que-olha-triste-71969742.jpg" alt= "" style="width: 500px; ">
+<br><br>
+<button onclick="futuro()">como estarei no futuro</button><br><br>
+
+Quanto dinheiro terá em 6 meses <input type="text" id="meses"><br><br>
+
+Quanto dinheiro terá em 3 anos <input type="text" id="anos"><br><br>
+
+<span id="imagem"></span>
+<span id="foto"></span>
+
+</body>
+</html>
+
+<script>
+
+    function futuro (){
+ imagem.innerHTML='<img style="width: 400px;" src= "https://riconnect.rico.com.vc/wp-content/uploads/sites/4/2021/05/como-economizar-dinheiro-dicas.jpg">' + 'R$' + meses.value;
+ foto.innerHTML='<img src= "https://www.revistaplaneta.com.br/wp-content/uploads/sites/3/2015/08/img-253392.jpg">' + 'R$' + anos.value;   
+
+
+
+    }
+</script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorit</title>
+</head>
+
+<body>
+    <div id="div_parte1" style="display:block;">
+        <h2>Associação Sorit</h2>
+        Informe a idade do associado:
+        <input type="number" id="ipt_idade">
+        <button onclick="cadastrar()">Cadastrar</button>
+        <br>
+    </div>
+
+    <div id="div_parte2" style="display:block;">
+        Informe o intervalo de idade que deseja analisar:
+        <input type="number" id="ipt_intervaloA" placeholder="Idade Inicial"> à 
+        <input type="number" id="ipt_intervaloB" placeholder="Idade Final">
+        <button onclick="analisar()">Analisar Ocorrências</button>
+        <div id="mostrar"></div>
+    </div>
+    </body>
+
+</html>
+
+<script>
+    var vt_idade = [];
+    function cadastrar() {
+        mostrar.innerHTML = '';
+        var idade = Number(ipt_idade.value);
+
+        if (idade <= 0) {
+            alert(`Informe uma idade válida`)
+        } else if (idade < 18) {
+            alert(`Idade inferior à permitida`);
+        } else if (idade > 80) {
+            alert(`Idade superior à permitida`);
+        } else if (idade >= 65 && idade <= 80) {
+            alert(`Associação permitida, mas com restrições`);
+            vt_idade.push(idade);
+        } else {
+            vt_idade.push(idade);
+        }
+
+    for (var index = vt_idade.length -1; index >= 0; index--) {
+        mostrar.innerHTML += `${vt_idade[index]}<br>`;
+    
+    } 
+}
+
+    function analisar() {
+        var intervaloA = Number(ipt_intervaloA.value);
+        var intervaloB = Number(ipt_intervaloB.value);
+
+        var menor = 99;
+        var maior = 0;
+        var media = 0;
+
+        if (vt_idade == '') {
+            alert ('Antes de Analisar faça o cadastro das idades');
+        } else  if ((intervaloA > 0 && intervaloA < intervaloB) && (intervaloB > 0 && intervaloB > intervaloA)) {
+            // for (var index = 0; index < vt_idade.length; index++) {
+            //     if (condition) {
+            //         const element = array[index];
+            //     } Aqui foi onde eu parei
+                
+            
+          
+            mostrar.innerHTML = `<b>Resumo do intervalo de ocorrências</b><br>
+                                 Inicial: ${intervaloA}  Final: ${intervaloB} <br>
+                                 Menor Idade do intervalo: ${intervaloA} <br>
+                                 Maior Idade do intervalo: ${intervaloB} <br>
+                                 Qtde de idades cadastradas no intervalo: ${vt_idade.length}
+                                 Média das idades do intervalo: XX,X`;
+        } else {
+            alert ('Informar o intervalo de ocorrências corretamente');
+        }
+    
+    }
+</script>

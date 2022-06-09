@@ -1,0 +1,252 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movetech | Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style-dash.css">
+</head>
+<body>
+  <div id="global" class="global-class">
+
+      <div id="header-left" class="header-left-class">
+        
+        <div class="caixa-user-class">
+          <h2>Olá, username</h2>
+        </div>
+
+        <div class="caixa2-postIt-class">
+
+        
+        </div><br></br>
+
+
+        <main>
+          <div class="calendar">
+            <div class="month-indicator">
+              <time datetime="2022-04"> Abril 2022 </time> <br>
+            </div>
+            <div class="day-of-week">
+              <div>Seg</div> <div>Ter</div> <div>Qua</div> <div>Qui</div> <div>Sex</div> <div>Sab</div> <div>Dom</div> <br>
+            
+            </div>
+            <div class="date-grid">
+              <button>
+                <time datetime="2022-04-01">1</time>
+              </button>
+              <button>
+                <time datetime="2022-04-02">2</time>
+              </button>
+              <button>
+                <time datetime="2022-04-03">3</time>
+              </button>
+              <button>
+                <time datetime="2022-04-04">4</time>
+              </button>
+              <button>
+                <time datetime="2022-04-05">5</time>
+              </button>
+              <button>
+                <time datetime="2022-04-06">6</time>
+              </button>
+              <button>
+                <time datetime="2022-04-07">7</time>
+              </button>
+              <button>
+                <time datetime="2022-04-08">8</time>
+              </button>
+              <button>
+                <time datetime="2022-04-09">9</time>
+              </button>
+              <button>
+                <time datetime="2022-04-10">10</time>
+              </button>
+              <button>
+                <time datetime="2022-04-11">11</time>
+              </button>
+              <button>
+                <time datetime="2022-04-12">12</time>
+              </button>
+              <button>
+                <time datetime="2022-04-13">13</time>
+              </button>
+              <button>
+                <time datetime="2022-04-14">14</time>
+              </button>
+              <button>
+                <time datetime="2022-04-15">15</time>
+              </button>
+              <button>
+                <time datetime="2022-04-16">16</time>
+              </button>
+              <button>
+                <time datetime="2022-04-17">17</time>
+              </button>
+              <button>
+                <time datetime="2022-04-18">18</time>
+              </button>
+              <button>
+                <time datetime="2022-04-19">19</time>
+              </button>
+              <button>
+                <time datetime="2022-04-20">20</time>
+              </button>
+              <button>
+                <time datetime="2022-04-21">21</time>
+              </button>
+              <button>
+                <time datetime="2022-04-22">22</time>
+              </button>
+              <button>
+                <time datetime="2022-04-23">23</time>
+              </button>
+              <button>
+                <time datetime="2022-04-24">24</time>
+              </button>
+              <button>
+                <time datetime="2022-04-25">25</time>
+              </button>
+              <button>
+                <time datetime="2022-04-26">26</time>
+              </button>
+              <button>
+                <time datetime="2022-04-27">27</time>
+              </button>
+              <button>
+                <time datetime="2022-04-28">28</time>
+              </button>
+              <button>
+                <time datetime="2022-04-29">29</time>
+              </button>
+              <button>
+                <time datetime="2022-04-30">30</time>
+              </button>
+              <button>
+                <time datetime="2022-04-31">31</time>
+              </button>
+            </div>
+          </div>
+        </main>
+        
+
+
+      </div>
+
+
+
+
+      <div>
+          <canvas id="canvasChartLine" class="tamanhoGraficos-class"></canvas>
+      </div>
+
+      <div>
+          <canvas id="canvasChartBar"  class="tamanhoGraficos-class"></canvas>
+      </div>
+  </div>   
+</body>
+</html>
+
+<script>
+    // Gráfico de linha
+    const labels = [
+      '06:00',
+      '07:00',
+    //   '08:00',
+      '09:00',
+      '10:00',
+    //   '11:00',
+      '12:00',
+      '13:00',
+    //   '14:00',
+      '15:00',
+      '16:00',
+    //   '17:00',
+    //   '18:00',
+      '19:00',
+      '20:00',
+    //   '21:00',
+    //   '22:00',
+      '23:00',
+      '00:00',
+      '03:00',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Temperatuta (°C)',
+        backgroundColor: 'rgba(218,165,32)',
+        borderColor: 'rgba(218,165,32)',
+        data: [15, 17, 18, 19, 20, 26, 24, 23,20, 20, 19, 18, 16],
+        },
+        {
+        label: 'Umidade (PH)',
+        backgroundColor: 'rgba(32,178,170)',
+        borderColor: 'rgba(32,178,170)',
+        // exemplo das umidades em ph (3.5, 4, 5, 6, 7, 8)
+        data: [8, 8, 5, 5, 3.5, 3.5, 4, 4, 6, 7, 8, 8, 8], 
+      }]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+    // Fim do gráfico de linha
+
+    // Gráfico de Barras
+    const labels1 = [
+      '01/April',
+      '02/April',
+      '03/April',
+      '04/April',
+      '05/April',
+      '06/April',
+      '07/April',
+      
+    ];
+
+    const data1 = {
+      labels: labels1,
+      datasets: [{
+        label: 'Temperatuta Média (°C)',
+        backgroundColor: 'rgba(218,165,32)',
+        borderColor: 'rgba(218,165,32)',
+        data: [15, 17, 18, 19, 20, 26, 24 ],
+        },
+        {
+        label: 'Umidade Média (PH)',
+        backgroundColor: 'rgba(32,178,170)',
+        borderColor: 'rgba(32,178,170)',
+        // 3.5, 4, 5, 6, 7, 8
+        data: [8, 8, 5, 5, 3.5, 3.5, 4], 
+      }]
+    };
+
+    const config1 = {
+      type: 'bar',
+      data: data1,
+      options: {}
+    };
+    // Fim do gráfico de Barras
+    
+  </script>
+
+    <script>
+    const myChartLine = new Chart(
+      document.getElementById('canvasChartLine'),
+      config
+    );
+
+    const myChartLine1 = new Chart(
+      document.getElementById('canvasChartBar'),
+      config1
+    );
+
+    </script>

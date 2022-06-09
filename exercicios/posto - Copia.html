@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Posto</title>
+
+</head>
+
+ 
+
+<body>
+
+    <h2>Posto Estrela - Controle de Vendas</h2>
+
+ 
+
+    <div id="div_abertura" style="display: block;">
+
+        <h3>------------------Abertura do Posto------------------</h3>
+
+        Entre com o volume de Etanol do tanque:
+
+        <input id="ipt_etanol"> <br>
+
+        Entre com o volume de Gasolina do tanque:
+
+        <input id="ipt_gasolina"> <br>
+
+        <button onclick="abrir()">Abrir o Posto</button> <br>
+
+        <div id="div_msg_abertura"></div>
+
+    </div>
+
+ 
+
+    <div id="div_venda" style="display: none;">
+
+        <h3>-------Registro das Operações de venda do turno--------</h3>
+
+        Entre com o volume vendido:
+
+        <input id="ipt_venda">
+
+        Informe o produto vendido:
+
+        <select id="sel_produto">
+
+            <option value="s">--Selecione--</option>
+
+            <option value="e">etanol</option>
+
+            <option value="g">gasolina</option>
+
+        </select>
+
+        <button onclick="registrar()">Registrar a Venda</button>
+
+        <button onclick="encerrar()" style="background-color: red;">Encerrar o Turno</button>
+
+        <br><br>
+
+        <span id="span_msg"></span>
+
+    </div>
+
+</body>
+
+ </html>
+ <script>
+     function abrir() {
+     var etanol= ipt_etanol.value;
+     var gasolina = ipt_gasolina.value;
+
+     if (etanol < 300) {
+        div_msg_abertura.innerHTML = "ERRO Com esse volume de Etanol não da para abrir o posto"
+         }
+         if (etanol ==300 && etanol == 3000) {
+             div_msg_abertura.innerHTML = "AVISO: Chame o reabastecimento de etanol"
+             
+         } if (etanol >3000) {
+             
+         }
+           if (gasolina < 200) {
+               
+           } else {
+               div_msg_abertura.innerHTML = "Erro com esse volume de gasolina não da para abrir o posto"
+           }
+         
+           if (gasolina == 200 && gasolina == 2000) {
+               div_msg_abertura.innerHTML = "AVISO: Chame o reabastecimento de gasolina"
+               
+           } else {
+            (gasolina >2000)
+               }
+   }
+ </script>
+
+ <script>
+ function registrar () {
+
+    div_abertura.style.display = "none";
+
+    var venda = ipt_venda.value;
+    var quantidade = sel_produto.value;
+
+    if (venda == "e" && quantidade == "g")  
+
+    {
+       span_msg.innerHTML+= `Com a venda de ${venda} de ${quantidade} o saldo no tanque é de ${venda - quantidade}`
+}
+
+ }
+
+ function encerrar() {
+
+    div_venda.style.display = "block"; 
+
+    
+ 
+    if (venda >1000 && quantidade >1500 || venda, quantidade <300) {
+        
+    } else { 
+        span_msg.innerHTML = `Hoje o turno foi ${venda + quantidade}`
+        
+    }
+
+ }
+
+    
+ </script>
+
+ <!-- Boa tarde professor, dei o meu melhor, infelizmente os códigos não funcionaram 
+     eu quebrei a cabeça, consultei tudo que eu podia mas não consegui fazer fucionar, sei não adianta justificar 
+     mas estudei bastante e mesmo assim não consegui, mas ao menos sinto que eu evolui bastante nas suas aulas,
+     espero não estar enganada.
+ -->
+

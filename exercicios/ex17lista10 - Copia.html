@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 17 da lista 10</title>
+</head>
+<body>
+
+    <select id="arroz">
+
+        <option value="0">--Selecione--</option>
+        <option value="branco">Arroz branco</option>
+        <option value="integral">Arroz integral</option>
+            
+    </select>
+
+    <input id="cozinhar" placeholder="Quantos min pra cozinhar?">
+    <input id="quantidade" placeholder="Quantas gramas de sal?">
+    <button onclick="avaliar()">Avaliar arroz</button>
+    <div id="exibir"></div>
+    
+</body>
+</html>
+<script>
+
+function avaliar () {
+
+    var comida = arroz.value;
+    var refeiçao = cozinhar.value;
+    var comer = quantidade.value;
+    if (comida == "branco" && refeiçao == 10 && comer <= 10 || comida == "integral" && refeiçao == 20 && comer <= 15) {
+        exibir.innerHTML=("Arroz perfeito")
+        
+    } else{
+       exibir.innerHTML= "Seu arroz não está perfeito"
+
+    }
+
+
+    
+}
+
+
+
+</script>

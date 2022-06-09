@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=, initial-scale=1.0">
+   <title>123</title>
+</head>
+<body>
+<p>nome</p> <input type="text"
+   id="nome";></input> 
+<p>idade</p><input type="Number"
+   id="idade"></input>
+<input type="button" value="Enviar"
+onclick="envie()">
+ <div id='validar'>
+ </div> 
+</body>
+
+<script>
+   const nome= 
+["Fernando","Ana","Hugo"]
+
+function envie() {
+
+    var nome1= window.document.getElementById('nome').value
+    var idade1=window.document.getElementById('idade').value
+
+ if(nome1==nome[0]&&idade1=="15")
+ { alert(validar.innerHTML=`Bem Vindo ${nome[0]}`) 
+}
+else if (nome1==nome[1]&&idade1=="16"){
+   alert(validar.innerHTML=`Bem Vindo ${nome[1]}`)
+}
+else if (nome1==nome[2]&&idade1=="17"){
+  alert(validar.innerHTML=`Bem Vindo ${nome[2]}`)
+}
+else{
+   alert(validar.innerHTML='Nome fora do banco de dados ou idade incorreta')}
+}
+</script>
+</html>

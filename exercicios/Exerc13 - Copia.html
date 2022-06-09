@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc13</title>
+</head>
+<body>
+    
+ Valor do salário bruto do usuário <input type="text" id="bruto"><br><br>
+
+ <button onclick="usuario()">salario bruto</button>
+
+ <div id="salario"></div>
+  
+
+</body>
+</html>
+
+<script>
+
+    function usuario (){
+
+salario.innerHTML = `<span style= "color: blue;">Apesar de seu bruto ser <b style="color: green;"> R$${bruto.value}</b>,
+    após os descontos, você receberá somente <b style="color: red;"> R$${bruto.value - (bruto.value * 0.333)}</b></span>`
+
+    }
+
+
+
+
+</script>
