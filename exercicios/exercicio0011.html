@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerccicio0011</title>
+</head>
+<body>
+    <h1>Cofre Abundante</h1>
+   
+    <select id="sel_moedas">
+    <option value="0.05">5 centavos</option>
+    <option value="0.10">10 centavos</option>
+    <option value="0.25">25 centavos</option>
+    <option value="0.50">50 centavos</option>
+    <option value="1">1 real</option>
+    </select> <br><br>
+
+<button onclick="deposito()">Depositar</button>
+<button onclick="zerar()">Gastar a Grana</button>
+
+<p>O saldo do cofrinho é de R$: <span id="spanText">0</span> </p>
+<p>A quantidade de operações: <span id="spanText2">0</span> </p>
+<p>Média dos depositos: <span id="spanText3">0</span> </p>
+
+</body>
+</html>
+<script>
+
+var depositos = 0;
+var valor = 0;
+
+    function deposito(){
+
+    depositos++;
+    valor = valor + Number(sel_moedas.value);
+    spanText.innerHTML = valor.toFixed(2);
+    spanText2.innerHTML = depositos;
+    spanText3.innerHTML = (valor/depositos).toFixed(2);
+    
+}
+
+function zerar(){
+
+spanText.innerHTML = 0;
+spanText2.innerHTML = 0;
+spanText3.innerHTML = 0;
+
+}
+
+
+
+
+</script>

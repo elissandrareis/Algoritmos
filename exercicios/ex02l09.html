@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02 lista 09</title>
+</head>
+
+<body>
+
+    <h1>Auxilio emergencial</h1>
+    <input id="renda" placeholder="Qual sua renda?">
+    <input id="total" placeholder="Renda total familiar">
+    <button onclick="verificar()">Verificar ajuda</button>
+
+</body>
+
+</html>
+<script>
+    function verificar() {
+        console.log("teste")
+        var rendausuario = renda.value;
+        var familiar = total.value;
+        if (rendausuario <= 1050 && familiar <= 2100) {
+            console.log("dentro do if")
+            console.log(rendausuario)
+
+
+            alert("Voce tera direito!")
+        }
+        else {
+            alert("voce NÃO tera direito")
+        }
+
+
+
+
+
+    }
+
+
+
+
+</script>

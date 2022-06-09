@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 14 da lista 9</title>
+</head>
+
+<body>
+
+    <div id="seleçoes" style="display: block;">
+
+        <h1>Vamos fazer uma seleção! Qual intervalo da sua altura desejada?</h1>
+
+     <p><b>Pilotos</b></p>
+    
+    <input id="inicio" placeholder="Altura inicial?">
+    <input id="final" placeholder="Altura final?"> 
+
+    <p><b>Jogadores de basquete</b></p>
+
+    <input id="inicio2" placeholder="Altura inicial?">
+    <input id="final2" placeholder="Altura final?">
+
+   <p><button onclick="selecionar()">selecionar</button></p>
+    
+</div>
+
+<div id="requisitos" style="display:none;">
+
+    <h1>Processo de Seleção de novos atletas</h1>
+    <div>Critério de Seleção de piloto – altura entre <span id="inicio && final"></span> </div>
+    <div>Critério de Seleção de basquete – altura entre <span id="inicio1 && final2"></span> </div>
+
+</div>
+
+<div id="candidato" style="display:none;">
+    <h1>Candidatos</h1>
+    <p><input" id="nome" placeholder="Insira seu Nome"></p>
+    <p><input id="altura" placeholder="Insira sua Altura"></p>
+
+    <select id="modalidade" onchange="escolha()">
+
+        <option value="0">--Selecione--</option>
+        <option value="pilotar">Piloto</option>
+        <option value="jogar">Jogador de basquete</option>
+        
+    </select>
+<div id="mensagem"></div>
+
+</div>
+   
+</body>
+
+</html>
+<script>
+
+    var esportes = 0;
+    var inicioPiloto = 0;
+    var finalPiloto = 0;
+    var inicioBasquete = 0;
+    var finalBasquete = 0;
+    
+    function selecionar() {
+
+        var inicioPiloto = inicio.value;
+        var finalPiloto = final.value;
+        var inicioBasquete = inicio2.value;
+        var finalBasquete = final2.value;
+        
+        if (inicioPiloto >=1 && inicioBasquete >= 1.5 && finalPiloto >= 1 && finalBasquete >= 1.5 ) {
+
+            seleçoes.style.display = "none";
+            requisitos.style.display = "block";
+            candidato.style.display = "block";
+            inicio_piloto.innerHTML = `${inicioPiloto}`;
+            final_piloto.innerHTML = `${finalPiloto}`;
+            inicio_basquete.innerHTML = `${inicioBasquete}`;
+            final_basquete.innerHTML = `${finalBasquete}`;
+
+        } else {
+            alert ('NÃO SEGUIR EM FRENTE');
+            
+        }
+
+        function escolha(){
+           
+            var esportes = modalidade.value;
+            var candidado1 = nome.value;
+            var candidato2 = altura.value;
+            var finalPiloto = final.value;
+            var finalBasquete = final2.value;
+            if (esportes == "pilotar" && candidato2 >= 1 && candidato2 <= finalPiloto) {
+                mensagem.innerHTML += `<br> O candidato ${candidato1} com a altura de ${candidato2} participará do processo de seleção de piloto`;
+                } else if (esportes == "jogar" && candidato2 >= 1.5 && candidato2 <= finalBasquete){
+                    mensagem.innerHTML += `<br> O candidato ${candidato1} com a altura de ${candidato2} participará do processo de seleção para jogador de basquete`;
+                } else {
+                    mensagem.innerHTML += `Infelizmente o candidato ${candidato1} com a altura de ${candidato2} não atende os requisitos`;
+
+                }
+
+
+
+            
+        }
+    
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>

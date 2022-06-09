@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+
+    <h2>Simulação do tempo do trajeto do Extremo leste a Sptech</h2>
+
+    Quantos ônibus você precisa pegar? <input id="onibus"> <br>
+    Quantos trens você precisa pegar? <input id="trem"> <br>
+    Quantos metrôs você precisa pegar? <input id="metro"> <br>
+
+    <button onclick="partiu()">#Partiu trajeto</button>
+
+    <div id="mensagem"></div>
+    
+</body>
+</html>
+<script>
+
+    function partiu() {
+        
+   
+
+var busao = onibus.value;
+var trensao = trem.value;
+var linha = metro.value;
+
+while (busao >=1 || trensao >=2 || linha >=3  ) {
+
+    busao++
+
+    mensagem.innerHTML += ` Pegando o ${busao}º buzão pegando o ${trensao} pegando o ${linha} <br>`
+    
+}
+
+}
+
+
+
+</script>

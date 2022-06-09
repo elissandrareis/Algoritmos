@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc07</title>
+</head>
+<body>
+
+Avaliação Continuada <input type="text" id="continuada"><br>
+Avaliação Semestral <input type="text" id="semestral"><br>
+Nome do Aluno <input type="text" id="nome"><br>
+<button onclick="media()">notas</button>
+<div id="avaliar"></div>
+    
+</body>
+</html>
+<script>
+
+function media() {
+   avaliar.innerHTML = `A média de ${nome.value} será de ${Number(continuada.value * 0.4) + Number(semestral.value * 0.6)}`
+
+
+
+}
+
+
+</script>

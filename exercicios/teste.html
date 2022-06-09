@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+
+<body>
+
+    <h2>Associação Sorit</h2>
+
+    <input id="idade" placeholder="Informe sua idade">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="exibir"></div>
+    
+
+    Intervalo de ocorrências para análise
+    <input id="desde"> <input id="ate"> 
+    <button onclick="analise()">Analisar Ocorrências</button>
+    <div id="emitir"></div>
+
+</body>
+
+</html>
+<script>
+
+    var associar = [];
+    
+
+    function cadastrar() {
+        
+       
+        var anos = Number(idade.value)
+        idade.value = ''
+
+        if (anos < 18) {
+            alert("idade inferior a permitida")
+        }
+
+        if (anos > 80) {
+            alert("idade superior à permitida")
+        }
+
+        else {
+            if (anos >= 18 && anos <= 80) {
+                if (anos >= 65 && anos <= 80) {
+                    alert("Associação permitida, mas com restrição")
+                }
+                associar.push(anos)
+                exibir.innerHTML = ''
+                for (var index = associar.length - 1; index >= 0; index--) {
+                    exibir.innerHTML += `${associar[index]}<br>`
+
+                }
+            }
+        }
+
+
+
+    }
+
+    var maior_idade = 0
+    var menor_idade = 9999999
+    var soma_idade = 0
+    var media = 0
+
+    function analise() {
+
+        var menor = Number(desde.value)
+        var maior = Number(ate.value)
+
+        if (associar.length == 0) {
+            alert("Antes de Analisar faça o cadastro das idades")
+        }
+        else {
+            if (menor >= maior) {
+                alert("Informar o intervalo de ocorrências corretamente")
+            }
+            else {
+
+                for (var index = menor - 1; index < maior; index++) {
+
+                    if (associar[index] > maior_idade) {
+                        maior_idade = associar[index]
+                    }
+                    if (associar[index] < menor_idade) {
+                        menor_idade = associar[index]
+                    }
+                    media += 1
+                    soma_idade += associar[index]
+
+                    var calcular = soma_idade / media
+
+                    ocorrencia.innerHTML = `Inicial: ${menor} Final: ${maior} <br><br>
+
+                    Resumo do intervalo de ocorrências <br>
+
+                    Menor Idade do intervalo: ${menor_idade} <br>
+
+                    Maior Idade do intervalo: ${maior_idade} <br>
+
+                    Qtde de idades cadastradas no intervalo: ${index + 1} <br>
+
+                    Média das idades do intervalo: ${calcular.toFixed(2)} <br>`
+                }
+            }
+        }
+
+    }
+
+
+</script>

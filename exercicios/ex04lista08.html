@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 04 da lista 08 elseif</title>
+</head>
+
+<body>
+
+    <h1>Avalie o peso do seu filho aqui</h1>
+    <input id="peso" placeholder="Qual o peso do seu filho?">
+    <button onclick="avaliar()">Avaliar Peso</button>
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    function avaliar() {
+        var resultado = peso.value;
+
+        if (resultado <= 13.5) {
+            mensagem.innerHTML = "Abaixo do peso"
+
+        } else if (resultado >= 21.2) {
+            mensagem.innerHTML = "Acima do peso"
+        }
+
+
+        else if (resultado == 18.3) {
+
+            mensagem.innerHTML = "Peso perfeito!!"
+        }
+
+        else if (resultado > 13.5 && resultado < 21.2) {
+            mensagem.innerHTML = "Peso na Média"
+        }
+
+
+    }
+
+</script>

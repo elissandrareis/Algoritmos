@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 22</title>
+</head>
+<body>
+Votos na Praça é nossa: <b id="votosPraca">0</b><br>
+Votos no Zorra total: <b id="votosZorra">0</b><br>
+Total de votos: <b id="totalVotos">0</b><br>
+
+<button onclick="praca()">Votar na praca é nossa</button>
+<button onclick="zorra()">Votar no Zorra total</button>
+<button onclick="Total()">Total de votos</button>
+
+
+</body>
+</html>
+<script>
+
+var ax_vezes = 0
+
+function praca () {
+   ax_vezes++;
+   votosPraca.innerHTML = ax_vezes
+}
+
+function zorra () {
+ax_vezes ++;
+votosZorra.innerHTML = ax_vezes
+}
+
+function Total (){
+
+totalVotos.innerHTML = (Number(votosPraca.innerHTML) + Number(votosZorra.innerHTML));
+}
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Benedito</title>
+</head>
+<body>
+
+    <select id="receber">
+
+    <option value="2">Divisivel por 2</option>
+    <option value="3">Divisivel por 3</option>
+    <option value="5">Divisivel por 5</option>
+    <option value="7">Divisivel por 7</option>
+    <option value="13">Divisivel por 13</option>
+
+    </select> 
+
+    <button onclick="analisar()">Analisar</button>
+
+    <span id="mensagem"></span>
+    
+</body>
+</html>
+<script>
+
+function analisar() {
+
+    // var validar= 0;
+    var receba= receber.value;
+
+    while (receba >=1) {
+
+        if (receba % "2") {
+
+        mensagem.innerHTML= `O número ${receba} é divisível por 2`;
+        
+        
+    }
+        
+    }
+
+
+}
+
+</script>

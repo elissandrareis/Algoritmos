@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02 elseif</title>
+</head>
+
+<body>
+
+    <h1>Classe social de uma pessoa que mora em Tuvalu</h1>
+
+    <input id="renda" placeholder="Renda familiar mensal">
+    <button onclick="analisar()">Analisar Renda</button>
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+
+    function analisar() {
+        var resultado = renda.value;
+
+        if (resultado == 250) {
+            mensagem.innerHTML = "Classe E"
+
+        } else {
+            if (resultado > 250) {
+                mensagem.innerHTML = "Classe D"
+            }
+
+            else{
+                if (resultado > 900) {
+                    mensagem.innerHTML= "Classe C"
+                }
+            }
+             
+                if (resultado > 2500){
+                    mensagem.innerHTML = "Classe B"
+                } 
+            else {
+            if (resultado > 9500) {
+                    mensagem.innerHTML = "Classe A"
+
+                }
+            
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+</script>

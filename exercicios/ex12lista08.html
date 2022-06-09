@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+</head>
+
+<body>
+
+    <h1>Habilidade nos cliques</h1>
+
+
+    Voce ja clicou <span id="valor">0</span> vezes
+    <button onclick="clica()">Clica neu</button>
+    <div id="clicar"></div>
+
+</body>
+
+</html>
+<script>
+
+    var habilidade = 0;
+
+    function clica() {
+
+        habilidade++;
+        valor.innerHTML = ` ${habilidade}`;
+        if (habilidade < 5) {
+            clicar.innerHTML = 'Dedo fraquinho hein!!';
+        }
+        else {
+            if (habilidade <= 10)
+                clicar.innerHTML = "Dedo bom, mano!!";
+
+            else {
+            if (habilidade <=15) {
+                clicar.innerHTML = "Gosta de clicar hein!!";
+                
+            }
+            else{
+            if (habilidade >15){
+                clicar.innerHTML = "Eita dedo nervoso!!";
+            }
+
+            }
+            }
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+</script>

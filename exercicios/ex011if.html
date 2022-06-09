@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exif11</title>
+</head>
+<body>
+    
+<h2>Saldo da conta</h2>
+
+<p><input id="saldo" placeholder="valor do saldo" /></p>
+    <button onclick="verifique()">verificar Finanças</button><br><br>
+    <div id="verificar"></div>
+    
+</body>
+</html>
+<script>
+
+
+function verifique (){
+var valor = 0;
+valor = saldo.value;
+
+if (valor ==0) {
+
+verificar.innerHTML= '<span style="color:white; background-color: black;">Conta zerada!</span>';
+
+}
+else{
+
+
+
+   if (saldo <0) {
+       verificar.innerHTML = "Está devendo"
+      
+   } else {
+       verificar.innerHTML= "Saldo Positivo"
+    }
+       
+       
+   }
+}
+
+
+
+if (valor <0) {
+
+verificar.innerHTML= '<span style="color:white; background-color: red;">Esta devendo!</span>';
+
+}
+
+if (valor >0) {
+
+verificar.innerHTML= '<span style="color: white; background-color: blue;">Saldo Positivo! :)</span>';
+
+}
+
+
+
+</script>

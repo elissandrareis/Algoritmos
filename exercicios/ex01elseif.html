@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01 Else If</title>
+</head>
+
+<body>
+
+    <h1>Altura ideal para esportes</h1>
+    <input id="altura" placeholder="Qual sua altura?">
+    <button onclick="mostrar()">Resultado</button>
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    function mostrar() {
+        var aparecer = altura.value;
+
+        if (aparecer <= 1.65) {
+            mensagem.innerHTML= "Voce pode ser piloto de corrida"
+            
+        } else {
+            if (aparecer > 1.80) {
+                mensagem.innerHTML = "Voce pode ser jogador de volei ou basquete"
+                
+          
+            }
+            else {
+                
+                mensagem.innerHTML = "Voce pode ser jogador de futebol"
+                
+
+
+            }
+        }
+
+
+    }
+
+</script>

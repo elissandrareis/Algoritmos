@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+
+    <h2>Controle de vendas do Sr. Hideo</h2>
+
+    <div id="colher" style="display:block;">
+
+        <input id="colher_morangos">
+
+        <button onclick="vendas()">Abrir vendas</button>
+
+    </div>
+
+    <div id="vender" style="display:none;">
+
+        <input id="morangos_vendidos">
+
+        <input id="valor_venda">
+
+        <span id="mensagem"></span>
+
+        <button onclick="registrar()">registrar vendas</button>
+        <span id="exibir_msg"></span>
+
+
+        <button onclick="encerrar()">Encerrar vendas</button>
+        <span id="emitir_msg"></span>
+
+    </div>
+
+    
+</body>
+
+</html>
+<script>
+    // var colheita = 0;
+    var vender = 0;
+    var valor = 0;
+
+    function vendas() {
+
+        
+
+       var colheita = colher_morangos.value;
+
+
+        if (colheita < 100) {
+            alert('ERRO - Com esse volume de Morangos não dá para abrir as vendas')
+            colher.style.display="block"
+            vender.style.display="none"
+
+        }
+
+        if (colheita > 2000) {
+            alert('AVISO – Tudo isso!!! Verificar se a quantidade está correta')
+            colher.style.display="none"
+            vender.style.display="block"
+
+        } else (colheita == 100 && 2000)
+
+            colher.style.display="none"
+            vender.style.display="block"
+
+    }
+
+    vender = morangos_vendidos.value;
+    valor = valor_venda.value;
+
+    if (vender < 20 && valor == 5 && valor == 6) {
+
+        mensagem.innerHTML = 'Valor errado para essa quantidade vendida';
+        mensagem.innerHTML = 'Valor OK';
+
+    }
+
+    if (vender == 20 && vender == 40 && valor == 4.50 && valor == 5.50) {
+
+        mensagem.innerHTML = 'Valor errado para essa quantidade vendida';
+        mensagem.innerHTML = 'Valor OK';
+
+    }
+
+    if (vender > 40 && valor == 4.00 && valor == 5.00) {
+
+        mensagem.innerHTML = 'Valor errado para essa quantidade vendida';
+        mensagem.innerHTML = 'Valor OK';
+
+    }
+
+
+
+    function registrar() {
+
+        exibir_msg.innerHTML = `com a venda de ${vender} de caixas de Morango o saldo no restante é de ${vender - valor}`
+
+    }
+
+    function encerrar() {
+
+        <div id="vender" style="display:none;"></div>
+
+        emitir_msg.innerHTML = ` Venda de Morangos: 
+
+        Saldo de produto = ${vender - valor}
+
+        Volume total vendido = ${vender}
+
+        Valor total das vendas = R$ ${valor}
+
+        Valor médio das vendas = R$ ${valor - vender}
+
+
+        O turno hoje foi ${valor}
+
+        O maior volume vendido foi de: ${vender}
+
+        O maior valor de venda foi de R$ ${valor}
+
+
+
+        onde ${colheita - vender} = bom se o valor médio das vendas for maior ou igual a R$ 5,00 
+        ou se o volume total vendido maior que 1000 e o saldo de produto for menor que 100 caixas,
+        caso contrário, ${colheita - saldo} = normal `
+
+    }
+
+</script>

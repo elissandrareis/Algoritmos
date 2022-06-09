@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 01 L VETOR</title>
+</head>
+<body>
+
+    <h3>Lista de frutas</h3>
+
+    <input id="fruta" placeholder="Insira suas frutas favoritas">
+    <button onclick="pesquisar()">Pesquisar</button>
+    <div id="mostrar"></div>
+    
+</body>
+</html>
+<script>
+
+var lista = ["laranja", "kiwi", "mamao"];
+
+function pesquisar() {
+
+    if (lista.indexOf(fruta.value)==-1) {
+
+        mostrar.innerHTML = `A fruta ${fruta.value} não existe na lista`
+        
+    } else {
+        mostrar.innerHTML = `A fruta ${fruta.value} existe na lista`
+    }
+
+}
+
+</script>

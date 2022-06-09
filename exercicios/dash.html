@@ -1,0 +1,292 @@
+<! DOCTYPE html>  
+<html lang="pt-br">
+<cabeça>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- esse link abaixo servem para deixar o ícone do logotipo no navegador -->
+    <link rel="ícone de atalho" href="imagens/logo-agroh.png">
+
+    <título>AgrohCompany | Painel</título>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- 
+      já esse link é dos gráficos de linhas e barras que temos,
+      não sei se os polares vão precisar de link, caso sim, ele entra aqui
+      em uma nova tag <link> para ele
+    -->
+    <link rel="stylesheet" href="style-dash.css">
+</cabeça>
+<corpo>
+    <!-- essa tag div global é toda a nossa naveção da página, ela foi difivida em partes -->
+  <div id="global" class="classe global">
+
+    <!-- uma das partes é um cabeçalho esquerdo da página -->
+      <div id="cabeçalho-esquerda" classe="cabeçalho-esquerda-classe">
+
+        <div class="caixa-user-class">
+          <h2>Olá, <span id="nome de usuário">suor</span></h2>
+        </div>
+
+        <div class="caixa2-postIt-class"> <img src="imagens/paperclip.png" style="altura: 32px; display:flex; justify-content: flex-start"></div>
+        
+        <div id="calendario" class="caixa3-calendario-class">
+          <h4>calendário - desejável</h4>
+        </div>
+
+      </div>
+    <!-- fim do cabeçalho-esquerda ->
+    
+    <!-- 
+ outra parte é cabeçalho-direita toda parte direita da nossa página, tem uma mini nave, onde tem o logotipo, botões
+ e logotipo abaixo os gráficos
+    -->
+      <div id="cabeçalho-direita">
+
+        <div id="nave-header-right" class="nave-header-right-class">
+            <img src="imagens/logo-agroh&nome.jpeg" alt="logo-agrohCompany">
+
+            <ul>
+                <li><a href="#"><img src="imagens/envelope.png" alt="imagem-envelope"></a></li>
+                <li><a href="#"><img src="imagens/notificacao.png" alt="imagem-notificação"></a></li>
+                <li><a href="#"><img src="imagens/avatar.png" alt="imagem-avatar"></a></li>
+                <li><a href="#"><img src="imagens/sair.png" alt="imagem-saida"></a></li>
+            </ul>
+        </div>
+
+        <div id="body-header-right" class="body-header-right-class">
+
+          <div id="body2-header-right" class="body2-header-right-class">
+
+            <div id="body3-1-header-right" class="body3-header-right-class">
+
+              <!-- essa div com tela é o nosso primeiro gráfico polar "poder ser de temeperatura ou humidade" ->
+
+              <div class="body5-chartsPolares-class">
+
+                <div class="body5-1-chartsPolares-class">
+                    <canvas id="canvasChartPolarTempe" class="tamanhoGraficosPolares-class"></canvas>
+                </div>
+
+              </div>
+
+              <!-- aqui é a parte do centro dos dois gráficos polares, onde tem a temp e humi atual -->
+              <div class="body4-temperatura-umidade-class">
+                <p>Temperatura atual</p>
+                <estilo div="altura: 10vh; largura: 10vh; cor de fundo: laranja; display:flex; justify-content: center; alinhar itens: centro;" >0 °c</div>
+                <p>Umidade atual</p>
+                <div style="altura: 10vh; largura: 10vh; cor de fundo: darkcyan; display:flex; justify-content: center; align-items: center;" >0 pH</div>
+              </div>
+
+              <div class="body5-chartsPolares-class">
+                <!-- essa outra tela div é o nosso segundo gráfico polar -->
+                <div class="body5-1-chartsPolares-class">
+                    <canvas id="canvasChartPorlarHumi" class="tamanhoGraficosPolares-class"></canvas>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- 
+ essa div abaixo é reponsável em guardar os nossos dois outros gráficos bar e linha
+              deixei esses comentados, pq estavam dando um problema de tamanho. para descomentar é
+ só usuário o (Ctrl + : ), que vai ser sucesso!
+            -->
+            <div id="body3-header-right" class="body3-1-header-right-class">
+              <div>
+                  <canvas id="canvasChartLine" class="tamanhoGraficos-class"></canvas>
+              </div>
+
+              <div>
+                  <canvas id="canvasChartBar" classe="tamanhoGraficos-class"></canvas>
+              </div>
+            </div>
+
+          </div>
+          <!-- fim da div que começa na linha 61 -->
+        </div>
+        <!-- fim da div que começa na linha 59 ->
+      </div> 
+      <!-- fim da cabeçalho-direita -- >
+  </div>
+  <!-- fim da tag div global ->
+</corpo>
+</html>
+
+<roteiro>
+    Gráfico de linha
+    rótulos const  = [
+      '06:00',
+      '07:00',
+     '08:00',
+      '09:00',
+      '10:00',
+     '11:00',
+      '12:00',
+      '13:00',
+     '14:00',
+      '15:00',
+      '16:00',
+     '17:00',
+     '18:00',
+      '19:00',
+      '20:00',
+     '21:00',
+     '22:00',
+      '23:00',
+      '00:00',
+      '03:00',
+    ];
+  
+    dados const  = {
+      rótulos: rótulos,
+      conjuntos de dados: [{
+        rótulo: 'Temperatuta (°C)',
+        backgroundColor: 'rgba(218.165,32)',
+        borderColor: 'rgba(218.165,32)',
+        dados: [15, 17, 18, 19, 20, 26, 24, 23,20, 20, 19, 18, 16],
+        },
+        {
+        rótulo: 'Umidade (PH)',
+        backgroundColor: 'rgba(32.178.170)',
+        borderColor: 'rgba(32.178.170)',
+        exemplo das umidades em ph (3,5, 4, 5, 6, 7, 8)
+        dados: [8, 8, 5, 5, 3.5, 3.5, 4, 4, 6, 7, 8, 8, 8], 
+      }]
+    };
+  
+    const config = {
+      tipo: 'linha',
+      dados: dados,
+      opções: {}
+    };
+    Fim do gráfico de linha
+
+     Gráfico de Barras
+    rótulos const1  = [
+      '01/Abril',
+      '02/Abril',
+      '03/Abril',
+      '04/Abril',
+      '05/Abril',
+      '06/Abril',
+      '07/Abril',
+      
+    ];
+
+    dados const1  = {
+      rótulos: rótulos1,
+      conjuntos de dados: [{
+        rótulo: 'Temperatuta Média (°C)',
+        backgroundColor: 'rgba(218.165,32)',
+        borderColor: 'rgba(218.165,32)',
+        dados: [15, 17, 18, 19, 20, 26, 24 ],
+        },
+        {
+        rótulo: 'Umidade Média (PH)',
+        backgroundColor: 'rgba(32.178.170)',
+        borderColor: 'rgba(32.178.170)',
+        dados: [8, 8, 5, 5, 3.5, 3.5, 4], 
+      }]
+    };
+
+    const config1 = {
+      tipo: 'bar',
+      dados: data1,
+      opções: {}
+    };
+     Fim do gráfico de Barras
+    
+
+    inicio do gráfico polar 1
+    dados const2  = {
+        rótulos: [
+            'A',
+            'B',
+            'C',
+            'D',
+            'E',
+            'F'
+        ],
+        conjuntos de dados: [{
+            rótulo: 'Temperatura dos hectares',
+            dados: [15, 17, 20, 26, 23, 20],
+            backgroundColor: [
+                'rgb(160,82,45)',
+                'rgb(244.164,96)',
+                'rgb(255.222.173)',
+                'rgb(160,82,45)',
+                'rgb(210.105,30)',
+                'rgb(255.222.173)',
+            ]
+        }] 
+    };
+
+    const config2 = {
+        tipo: 'polarArea',
+        dados: data2,
+        opções: {}
+    }
+    fim do gráfico polar 1
+
+
+    inicio do gráfico polar 2
+    dados const3  = {
+        rótulos: [
+            'A',
+            'B',
+            'C',
+            'D',
+            'E',
+            'F'
+        ],
+        conjuntos de dados: [{
+            rótulo: 'Humidade dos hectares',
+            dados: [8, 8, 3.5, 3.5, 4, 6],
+            backgroundColor: [
+                'rgb(32,178,170)',
+                'rgb(32,178,170)',
+                'rgb(0,128,128)',
+                'rgb(0,128,128)',
+                'rgb(64,224,208)',
+                'rgb(72,209,204)',
+            ]
+
+        }]
+    };
+
+    const config3 = {
+        tipo: 'polarArea',
+        dados: data3,
+        opções: {}
+    }
+    fim do gráfico polar 2
+  </roteiro>
+
+    <roteiro>
+    const myChartLine = novo Gráfico(
+      documento. getElementById ('canvasChartLine'),
+      config
+    );
+
+    const myChartBar = novo Gráfico(
+      documento. getElementById ('canvasChartBar'),
+      config1
+    );
+    
+    const myChartPolar = novo Gráfico(
+      documento. getElementById('canvasChartPolarTempe'),
+      config2
+    );
+
+    const myChartPolar1 = novo Gráfico(
+      documento. getElementById('canvasChartPorlarHumi'),
+      config3
+    )
+
+    dentro dessa scrip, poder vir a const dos novos gráficos
+
+    arrasa Eli ;)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex05if</title>
+</head>
+<body>
+    
+<h1>CONTA DE LUZ</h1>
+
+<input id="luz" placeholder="kWh consumida por dia"/><br><br>
+<button onclick="conta()">Calular conta de luz</button>
+<div id="calule"></div>
+
+</body>
+</html>
+<script>
+
+    var calcular = 0;
+
+function conta(){
+  
+    calcular = Number(luz.value);
+    var resultado = calcular * 30;  
+    var mesnormal = resultado * 0.85;
+    var desconto = mesnormal * 0.1;
+    var conta = mesnormal - desconto;
+
+    if (resultado < 100){
+
+        alert (`valor da conta a ser paga é de: ${conta}`);
+    }
+
+    alert (`valor da conta a ser paga é de: ${mesnormal}`);
+
+}
+
+
+
+</script>

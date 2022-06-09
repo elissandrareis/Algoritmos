@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio01</title>
+</head>
+
+<body>
+    <h3>Tabuada</h3>
+    Insira seu número para ver sua Tabuada <input type="text" id="tabuada">
+    <button onclick="vTabu()">Ver Tabuada</button>
+    <div id="ver"></div>
+
+</body>
+
+</html>
+<script>
+
+    function vTabu() {
+        var valorInput = Number(tabuada.value);
+        ver.innerHTML += `${valorInput} x 1 = ${valorInput *1} <br>`;
+        ver.innerHTML += `${valorInput} x 2 = ${valorInput *2} <br>`;
+        ver.innerHTML += `${valorInput} x 3 = ${valorInput *3} <br>`;
+        ver.innerHTML += `${valorInput} x 4 = ${valorInput *4} <br>`;
+        ver.innerHTML += `${valorInput} x 5 = ${valorInput *5} <br>`;
+        ver.innerHTML += `${valorInput} x 6 = ${valorInput *6} <br>`;
+        ver.innerHTML += `${valorInput} x 7 = ${valorInput *7} <br>`;
+        ver.innerHTML += `${valorInput} x 8 = ${valorInput *8} <br>`;
+        ver.innerHTML += `${valorInput} x 9 = ${valorInput *9} <br>`;
+
+    }
+
+</script>

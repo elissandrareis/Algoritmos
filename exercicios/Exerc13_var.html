@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc13_var</title>
+</head>
+<body>
+    
+Valor do salário bruo do usuário <input type="text" id="bruto"><br><br>
+<button onclick="usuario()">Salário bruto</button>
+<div id="salario"></div>
+
+</body>
+</html>
+
+<script>
+
+function usuario(){
+
+var pagamento = Number (bruto.value)*0.1;
+var recebimento = Number (bruto.value)*0.2;
+var contcorrent = Number (bruto.value)/30;
+
+
+salario.innerHTML = `<span style= "color: blue;">
+    Apesar de seu bruto ser <b style="color: green;"> R$${bruto.value}</b>,após os descontos,
+você receberá somente 
+<b style="color: red;"> R$${bruto.value - (pagamento + recebimento + contcorrent).toFixed(2)}</b></span>`;
+
+}
+
+</script>
+
+

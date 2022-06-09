@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio If 12</title>
+</head>
+<body>
+
+    <h2>Possui filhos?</h2>
+
+    <input id="quantidade" placeholder="Quantidade de filhos"/>
+    <button onclick="analisar()">Analisar Família</button>
+    <div id="filhos"></div>
+
+</body>
+</html>
+<script>
+
+    function analisar(){
+
+        var familia = 0;
+        familia= quantidade.value;
+
+        if (familia >= 1){
+
+            filhos.innerHTML= 'Não tem TV';
+
+        }
+        
+        if (familia >=2){
+
+           filhos.innerHTML= 'Não tem TV<br> Não tem internet';
+
+        }
+    
+        if (familia >=3){
+
+           filhos.innerHTML= 'Não tem tv<br>Não tem internet<br>Não tem video game';
+
+        }
+
+        if (familia >=4){
+
+        filhos.innerHTML= 'Não tem tv<br> Não tem internet<br> Não tem video game<br> Não tem Netflix<br>';
+
+        }
+
+    }
+
+</script>

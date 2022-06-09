@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 11 LISTA VETOR</title>
+</head>
+
+<body>
+
+    <h2>Preço do produto</h2>
+
+    <input id="valor" placeholder="Qual o valor deste produto?">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="atualizar()">Atualizar Estoque</button>
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+<script>
+
+    var produto = [];
+
+    function cadastrar() {
+
+        produto.push(Number (valor.value));
+        valor.value = '';
+    }
+
+    function atualizar() {
+
+        var total = 0;
+
+        for (var index = 0; index < produto.length; index++) {
+
+            total += produto[index]
+
+            exibir.innerHTML += ` Você tem ${produto.length} produtos cadastrados em estoque <br>
+            Seu estoque vale R$ ${total}`
+
+        }
+
+    }
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 20</title>
+</head>
+<body>
+    
+    <h3>Informe seu salário</h3>
+    Pergunte qual o salario do usuario <input type="text" id="salario">
+    <button onclick="confirmação()">Confirmar salario</button><br><br>
+    <button onclick="pagar()">Pagar conta de 100</button><br><br>
+    <button onclick="conta()">Pagar conta de 500</button><br><br>
+    <button onclick="ganhar()">Ganhar 2000 na loteria</button><br><br>
+    <div id="grana"></div>
+</body>
+</html>
+<script>
+
+function confirmação (){
+grana.innerHTML = `Grana atual: R$ ${salario.value}`
+}
+function pagar (){
+    var conta100 = Number (100);
+    var contaFinal = salario.value - conta100 
+    grana.innerHTML = `Grana atual: R$ ${contaFinal} `
+}
+function conta (){ 
+     var conta500 = Number (500);
+     var contaFinal = salario.value - conta500
+     grana.innerHTML = `Grana atual: R$ ${contaFinal}`
+}
+function ganhar (){
+     var ganhar2000 = Number (2000);
+     var recebimento = Number (salario.value) + Number (ganhar2000)
+     grana.innerHTML = `Grana atual: R$ ${recebimento}`  
+}
+</script>

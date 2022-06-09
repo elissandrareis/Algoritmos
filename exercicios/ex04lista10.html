@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 04 da lista 10</title>
+</head>
+<body>
+
+    <h1>Parcelamento da compra</h1>
+    
+   <select id="pagamento">
+       <option value="0">Selecione</option>
+       <option value="1">Dinheiro</option>
+       <option value="2">Cartão de débito</option>
+       <option value="3">Cartão de crédito</option>
+       <option value="4">Boleto</option>
+   </select>
+   <button onclick="analisar()">Analisar Compra</button>
+   <div id="analisando"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var resultado= pagamento.value;
+        if (resultado == 1 || resultado ==2) {
+            analisando.innerHTML = "Você terá que pagar a vista"
+            
+        } 
+        else {
+            analisando.innerHTML = "Pagamento poderá ser parcelado"
+        }
+        
+    }
+
+
+
+
+</script>

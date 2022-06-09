@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+
+    <button onclick="numeros()">Números Cabalísticos</button>
+    <div id="mensagem"></div>
+    
+</body>
+</html>
+<script>
+
+function numeros() {
+    
+    var cabala= 0;
+
+    while (cabala <=15) {
+
+        if (cabala ==1 ||cabala == 2 || cabala ==5 || cabala == 8 || cabala ==11 || cabala==13 || cabala ==15 ) {
+            mensagem.innerHTML+= `${cabala}<br>`;
+        }
+        
+        cabala++;
+
+    }
+
+}
+
+
+
+
+</script>

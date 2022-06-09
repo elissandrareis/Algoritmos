@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio008</title>
+</head>
+
+<body>
+    <h1>Como está o meu atendimento!?</h1>
+
+    <select id="combo_estrelas">
+        <option value="1">1 estrela</option>
+        <option value="2">2 estrela</option>
+        <option value="3">3 estrela</option>
+        <option value="4">4 estrela</option>
+        <option value="5">5 estrela</option>
+    </select>
+
+    <button onclick="Avaliar()">Confirmar avaliação</button><br><br>
+    Média Atual:<div id="Média_atual">0</div><br>
+    Número de avaliações:<div id="Número_de_avaliações">0</div>
+
+</body>
+
+</html>
+<script>
+
+
+    var qtdoper = 0;
+    var ax_notas = 0;
+
+    function Avaliar() {
+
+        qtdoper++;
+
+        ax_notas = ax_notas + Number(combo_estrelas.value);
+
+        Média_atual = ax_notas / qtdoper;
+
+        ax_notas + qtdoper + Média_atual;
+
+    }
+
+
+
+
+</script>

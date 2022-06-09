@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof Alice</title>
+</head>
+
+<body>
+
+    <h2>Prof Alice</h2>
+
+    <input id="nome" placeholder="Informe seu nome">
+    <button onclick="cadastro()">Cadastrar</button> <br><br>
+    <button onclick="mostrar()">Mostrar</button>
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+<script>
+    var alunos = [];
+
+    function cadastro() {
+        alunos.push(nome.value);
+        nome.value='';
+    }
+
+    function mostrar() {
+        for (var index = 0; index < alunos.length; index++) {
+     exibir.innerHTML+= `A ${index+1}ª ocorrência é: ${alunos[index]}<br>`;
+     }
+
+    //  for (var index = alunos.length-1; index >=0; index--) {
+    //  exibir.innerHTML+= `A ${index+1}ª ocorrência é: ${alunos[index]}<br>`;
+    //  }
+
+
+
+        exibir.innerHTML = `O meu vetor está assim ${alunos} <br>`;
+        exibir.innerHTML += `A quantidade de ocorrências é ${alunos.length}<br>`;
+        exibir.innerHTML += `A primeira ocorrência é ${alunos[0]}<br>`;
+        exibir.innerHTML += `A terceira ocorrência é ${alunos[2]}<br>`;
+        exibir.innerHTML += `A ultima ocorrência é ${alunos[alunos.length-1]}`;
+        
+    }
+ 
+    
+
+
+
+</script>

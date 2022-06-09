@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+</head>
+<body>
+
+    Quais filmes você mais gosta? <input id="filmes" placeholder="Digite aqui">
+     <button onclick="cadastrar()">Cadastrar</button>
+     
+     <div id="exibir"></div>
+
+  <!-- <span style="color: red;">${assistir[index]</span>
+  <span style="color: blue;">${assistir[index]}</span> -->
+
+</body>
+</html>
+
+
+
+<script>
+
+var assistir = [];
+var contar =0;
+
+function cadastrar() {
+    assistir.push (filmes.value);
+    filmes.value = '';  
+
+
+  
+if ((assistir.length %2)!=0) {
+
+    exibir.innerHTML += ` <span style="color: red;">${assistir [contar] } </span> <br>`
+    
+} else if ((assistir.length %2)==0){
+    exibir.innerHTML += `<span style="color: blue;">${assistir [contar]} </span>`  
+    
+    
+}
+
+
+    contar++
+}
+
+</script>

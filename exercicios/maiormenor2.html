@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM2</title>
+</head>
+<!-- 
+Programa para exemplificar o como obter, de um conjunto de 
+Números não ordenados os seguintes valores:
+  - Maior
+  - Menor
+  - média 
+
+É necessário identificar o primeiro valor que será
+registrado, somente para esse primeiro caso, o valor
+dele é atribuido, tanto para a variável que guarda o
+maior valor, como para a variável que guarda o menor
+valor.
+-->
+<body>
+    <h2>Trabalhando com o maior e menor</h2>
+    Entre com número entre 15 e 23 <input id="ipt_num">
+    <button onclick="registro()">Registrar</button>
+    <br><br>
+    <button onclick="encerrar()">Encerrar</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    var ax_maior = 0 
+    var ax_menor = 0
+    var ax_qtde = 0
+    var ax_total = 0
+    var ax_primeiro = true
+    function registro() {
+        var ax_num = Number(ipt_num.value);
+        ipt_num.value = '';
+        if (ax_num < 15 || ax_num > 23) {
+            alert('Favor entrar com o intervalo correto')
+        } else {
+            if (ax_primeiro) {
+                ax_menor = ax_num;
+                ax_maior = ax_num;
+                ax_primeiro = false;
+            }
+            if (ax_num > ax_maior) {
+                ax_maior = ax_num;
+            }
+            if (ax_num < ax_menor) {
+                ax_menor = ax_num;
+            }
+            div_msg.innerHTML += `${ax_num} <br>`
+
+            ax_total += ax_num;
+            ax_qtde ++;
+        }
+    }
+    function encerrar() {
+        div_msg.innerHTML += `<br> Maior = ${ax_maior.toFixed(1)}
+                <br> Menor = ${ax_menor.toFixed(1)}
+                <br> Médio = ${(ax_total/ax_qtde).toFixed(1)}`
+    }
+</script>

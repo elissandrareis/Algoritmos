@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento pra prova</title>
+</head>
+<body>
+    
+    <select id="entreterimento">
+ <option value="0">--Selecione--</option>
+ <option value="1">Cinema</option>
+ <option value="2">Teatro</option>
+ <option value="3">Parque</option>
+ <option value="4">Show</option>
+ </select> <br><br>
+ <button onclique="atraçoes()">Ver atração</button>
+ <div id="exiba"></div>
+ 
+</body>
+</html>
+<script>
+
+function atraçoes() {
+
+    var opçoes= entreterimento.value;
+
+    if (opçoes = '1') {
+        exiba.innerHTML= "Voce vai assistir Marley&Eu"
+
+    if (opçoes='2'){
+        
+        exiba.innerHTML= "Fantasa da opera"
+        
+
+if (opçoes = '3') {
+    exiba.innerHTML= "Hopi Hari"
+}
+if (opçoes = '4') {
+    exiba.innerHTML= "Show da lady Gaga"
+}
+}
+    }
+    
+
+
+
+
+}
+
+
+
+
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagem</title>
+</head>
+<body>
+
+    <h2>Qual seu destino?</h2>
+
+    <input id="viagem" placeholder="Destino de viagem"><br><br>
+    <button onclick="adicionar()">Adicionar</button><br><br>
+    <button onclick="primeira()">Primeira Viagem</button><br><br>
+    <button onclick="terceira()">Terceira Viagem</button><br><br>
+    <button onclick="ultima()">Ultima Viagem</button>
+    <div id="emitir"></div>
+    
+</body>
+</html>
+<script>
+var destino = [];
+
+function adicionar() {
+    destino.push (viagem.value);
+    viagem.value='';  
+}
+
+function primeira() {
+
+    if (destino.length < 0) {
+        emitir.innerHTML = "Ainda não viajou" 
+    } else {
+        emitir.innerHTML = `${destino[0]}`
+      
+    }
+    
+}
+
+function terceira() {
+
+    if (destino.length <3) {
+        emitir.innerHTML = "Ainda não viajou"
+
+    } else {
+        emitir.innerHTML = `${destino[2]}`
+        
+    }
+}
+
+function ultima() {
+
+    if (destino.length <0) {
+        emitir.innerHTML = "Ainda não viajou"
+        
+    } else {
+        
+        emitir.innerHTML = `${destino[destino.length-1]}`
+        
+    }
+    
+}
+</script>

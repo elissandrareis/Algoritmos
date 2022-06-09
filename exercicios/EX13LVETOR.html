@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 13 VETOR</title>
+</head>
+
+<body>
+
+    <h2>Campeonato de Futebol</h2>
+
+    <select id="time">
+        <option value="in">Indique o resultado</option>
+        <option value="vi">Vitória</option>
+        <option value="em">Empate</option>
+        <option value="de">Derrota</option>
+    </select> <br><br>
+
+    <button onclick="registrar()">Registrar Jogo</button><br><br>
+    <div id="exibir"></div>
+
+    Indique qual jogo que saber resultado: <br><input id="jogo" onchange="resultado()">
+
+</body>
+
+</html>
+<script>
+
+    var futebol = ["vitoria", "empate", "derrota"];
+
+    function registrar() {
+        futebol.push(Number(time.value))
+        time.value = '';
+
+        var total = 0;
+
+        for (var index = 0; index < futebol.length; index++) {
+
+      exibir.innerHTML += `O time teve: ${futebol.length} vitórias, ${futebol.length} empates, ${futebol.length}derrotas <br>
+      Pontuação total: ${total} pontos <br>
+      Aproveitamento: ${} %`
+
+        }
+
+    }
+
+    function resultado() {
+
+        
+
+
+
+
+    }
+
+
+
+
+
+
+
+</script>

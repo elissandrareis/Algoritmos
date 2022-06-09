@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc005</title>
+</head>
+<body>
+
+    <h2>Vamos aprender a tabuada</h2>
+    
+    <select id="tabuada" onchange="calcular()">
+
+        <option value="2">Tabuada do 2</option>
+        <option value="3">Tabuada do 3</option>
+        <option value="4">Tabuada do 4</option>
+        <option value="5">Tabuada do 5</option>
+        <option value="6">Tabuada do 6</option>
+        <option value="7">Tabuada do 7</option>
+        <option value="8">Tabuada do 8</option>
+        <option value="9">Tabuada do 9</option>
+    </select>
+    <div id="resultado"></div>
+
+</body>
+</html>
+<script>
+function calcular(){
+
+    var minha_tabuada = Number (tabuada.value);
+resultado.innerHTML += ` ${minha_tabuada} x2=  ${minha_tabuada*2}<br>` 
+resultado.innerHTML +=`  ${minha_tabuada} x3=  ${minha_tabuada*3}<br>`
+resultado.innerHTML += ` ${minha_tabuada} x4=  ${minha_tabuada*4}<br>`
+resultado.innerHTML += ` ${minha_tabuada} x5=  ${minha_tabuada*5}<br>`
+resultado.innerHTML +=`  ${minha_tabuada} x6=  ${minha_tabuada*6}<br>`
+resultado.innerHTML +=`  ${minha_tabuada} x7=  ${minha_tabuada*7}<br>`
+resultado.innerHTML +=`  ${minha_tabuada} x8=  ${minha_tabuada*8}<br>`
+resultado.innerHTML +=`  ${minha_tabuada} x9=  ${minha_tabuada*9}<br>`
+
+
+}
+
+
+
+</script>

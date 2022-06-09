@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc02</title>
+</head>
+<body>
+    <h1>Opções de férias gastando pouco</h1>
+
+    
+    <button ondblclick="campo()">campo</button><br><br>
+
+    <button onclick="praia()">praia</button><br><br>
+
+     <button onclick="cidade()">cidade</button><br><br>
+                 <span id="campo"></span>
+                 <span id="praia"></span>
+                 <span id="cidade"></span>
+        
+</body>
+</html>
+
+
+
+
+<script>
+
+    function campo(){
+
+     campo.innerHTML= '<img src="campo.jpg" alt="150px"><b>Campo Belo<b> foi considerado o bairro campeão em roubo e furto a residências';
+     }
+
+    function praia(){
+
+    praia.innerHTML= '<img src="praia.jpg" alt="150px">Os moradores da Vila Praia se mobilizaram para manter a UBS ativa no bairro>';
+
+    }
+
+    function cidade(){
+
+    cidade.innerHTML= '<img src="cidade.jpg" alt="150px"> A <b>Cidade Tiradentes</b> teve a menor taxa de emprego formal da Capital de Sao Paulo>'; 
+
+}
+
+</script>
+    

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio014</title>
+</head>
+<body>
+    <h3>Robervaldo e suas pizzas</h3>
+
+    <select id="pizzaria">
+        <option value=""></option>
+    <option value="23.00">R$ 23.00 Muçarela</option>
+    <option value="24.00">R$ 24.00 Calabresa </option>
+    <option value="26.00">R$ 26.00 Atum</option>
+    <option value="30.00">R$ 30.00 Portuguesa</option>
+    </select> 
+    <br><br>
+    <select id="ingredientes">
+        <option value=""></option>
+        <option value="2.00">R$ 2.00 Queijo</option>
+        <option value="2.50">RS 2.50 Presunto</option>
+        <option value="1.50">R$ 1.50 Ovo</option>
+        <option value="4.00">R$ 4.00 Palmito</option>
+        <option value="3.50">R$ 3.50 Frango</option>
+        <option value="3.00">R$ 3.00 Catupiry</option>
+    </select> <br><br>
+    <select id="incrementos">
+        <option value=""></option>
+        <option value="2.00">R$ 2.00 Queijo</option>
+        <option value="2.50">RS 2.50 Presunto</option>
+        <option value="1.50">R$ 1.50 Ovo</option>
+        <option value="4.00">R$ 4.00 Palmito</option>
+        <option value="3.50">R$ 3.50 Frango</option>
+        <option value="3.00">R$ 3.00 Catupiry</option>
+    </select> <br><br>
+    <select id="adicionais">
+        <option value=""></option>
+        <option value="2.00">R$ 2.00 Queijo</option>
+        <option value="2.50">RS 2.50 Presunto</option>
+        <option value="1.50">R$ 1.50 Ovo</option>
+        <option value="4.00">R$ 4.00 Palmito</option>
+        <option value="3.50">R$ 3.50 Frango</option>
+        <option value="3.00">R$ 3.00 Catupiry</option>>
+    </select><br><br>
+    <button onclick="calcule()">Calcular preço da pizza</button><br><br>
+<div id="pizzas"></div>
+</body>
+</html>
+<script>
+    function calcule() {
+
+        var soma = Number(pizzaria.value) + Number(ingredientes.value) + Number(incrementos.value) + Number(adicionais.value)
+
+        pizzas.innerHTML = `A pizza era <b>R$ ${pizzaria.value}</b>, mas foi acrescida de <b>R$ ${ingredientes.value}</b>,
+        <b>R$ ${incrementos.value}</b> e <b>R$ ${adicionais.value}</b> custará um total de<u> R$ ${soma.toFixed(2)}</u>`
+    }
+
+
+
+
+
+</script>

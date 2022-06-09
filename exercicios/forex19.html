@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+
+<body>
+
+<h2>Fases da vida...</h2>
+<input id="idade">
+<button onclick="descrever()">Descreva</button>
+<div id="exibir"></div>
+
+</body>
+
+</html>
+<script>
+
+function descrever() {
+
+    // var contar= Number (idade.value);
+
+    for (var contar = 0; contar <= idade.value; contar++) {
+        
+        if (contar <=4) {
+        exibir.innerHTML+= `${contar} Primeira infancia<br>`    
+        }
+        
+        if (contar <=4 && contar <=6) {
+            
+        } else {
+
+            exibir.innerHTML+= `${contar}Pré-escolar <br>`
+            
+        }
+
+        if (contar <=6 && contar <=10) {
+            
+        } else {
+            exibir.innerHTML+= `${contar}Segunda infancia <br>`
+            
+        }
+
+        if (contar <=10 && contar <=18) {
+            
+        } else {
+            exibir.innerHTML+= `${contar}Adolescencia <br>`
+            
+        }
+
+        if (contar <=18 && contar <=50) {
+            
+        } else {
+            exibir.innerHTML+= `${contar}Adulto <br>`
+            
+        }
+
+        if (contar <=50 && contar <=100) {
+            
+        } else {
+            exibir.innerHTML+= `${contar}Melhor idade <br>`
+            
+        }
+
+        if (contar >=100) {
+            exibir.innerHTML+= `${contar}Matuzalem <br>`
+            
+        }
+
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+</script>

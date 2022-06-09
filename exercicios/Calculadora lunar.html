@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asc & Lua</title>
+</head>
+
+<body>
+    <h1>Extra!!</h1>
+    Calcule a sua lua! <br><br>
+
+    <input id="asc" placeholder="Insira o ano em que nasceu"> <br><br>
+
+    <button onclick="Calcular()">Calcular</button>
+
+    <div id="mostrar"></div>
+
+</body>
+
+</html>
+<script>
+
+    var lunar = ["Ascendente", "Lua"]
+
+
+
+    function Calcular() {
+
+        if (lunar.indexOf(asc.value) == -1) {
+
+            mostrar.innerHTML = `O signo de peixes ${asc.value} é o seu Ascendente`
+
+        } else {
+            mostrar.innerHTML = `O signo de Aries${asc.value} é a sua Lua`
+        }
+
+
+        // mostrar.innerHTML = `O que vem por ai...! ${Number(asclua.value * 0.12) + Number(asclua.value)}`
+
+        // `Você nasceu no ano de ${lunar} portanto sua Lua é ${asc}`
+
+
+
+    }
+
+
+
+</script>

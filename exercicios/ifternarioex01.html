@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista07 If com operador ternário</title>
+</head>
+<body>
+
+    <h2>Autoescola</h2>
+
+    <input id="nome" placeholder="Informe seu nome"><br><br>
+    <input id="idade" type="number" placeholder="Informe sua idade"><br><br>
+    <button onclick="avaliar()">Avaliar Aluno</button>
+    <div id="msg"></div>
+    
+</body>
+</html>
+<script>
+
+function avaliar() {
+
+    var name= nome.value;
+    var ano= idade.value;
+
+    // if (ano >=18) {
+    //     msg.innerHTML=`${name} Vamos tirar a CNH?`
+        
+    // } else {
+    //     msg.innerHTML=`${name} Vai jogar PlayStation!!!`
+        
+    // }
+
+    // condition ? V : F
+
+    (ano >=18)? msg.innerHTML=`${name} Vamos tirar a CNH?`: msg.innerHTML=`${name} Vai jogar PlayStation!!!`
+
+
+
+
+  
+}
+
+</script>

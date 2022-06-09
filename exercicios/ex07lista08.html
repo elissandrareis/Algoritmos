@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 07 da lista 08</title>
+</head>
+<body>
+
+    <h1>Vamos economizar?</h1>
+
+   <input id="economia" placeholder="Quanto economizou?">
+   <button onclick="gastar()">Poder de compra</button>
+   <div id="aparecer"></div>
+    
+</body>
+</html>
+<script>
+function gastar() {
+    var mostrar = economia.value;
+
+    if (mostrar <=0){
+        aparecer.innerHTML = "Nada de compras :("
+    } 
+    else if (mostrar >0 && mostrar <=100){
+        aparecer.innerHTML+= "Viajem de ida e volta pra Praia Grande <br><br>" 
+    }
+    else if (mostrar >100 && mostrar <4000){
+        aparecer.innerHTML+= "Uma boa moto usada <br><br>"
+    }
+    else if (mostrar >4000){
+        aparecer.innerHTML= "Mais alguma bobagem legal"
+    }
+
+}
+
+</script>

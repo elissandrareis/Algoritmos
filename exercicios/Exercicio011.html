@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio011</title>
+</head>
+<body>
+    Peso <input type="text" id="peso"><br><br>
+    Altura <input type="text" id="altura"><br><br>
+<button onclick="homem()">IMC HOMEM</button><br><br>
+<button onclick="mulher()">IMC MULHER</button>
+<div id="IMC"></div>
+</body>
+</html>
+
+<script>
+
+    function homem(){
+
+        var sora = Number(peso.value);
+        var raso = Number(altura.value);
+        var PEAL= sora/raso **2;
+        IMC.innerHTML= `o seu IMC é ${PEAL.toFixed(1)}`;
+
+    }
+
+    function mulher(){
+
+        var sora = Number(peso.value);
+        var raso = Number(altura.value);
+        var PEAL = sora/raso **2;
+        var WOMAN = PEAL*0.9;
+        IMC.innerHTML= `o seu IMC é ${WOMAN.toFixed(1)}`;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>

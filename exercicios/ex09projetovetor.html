@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+</head>
+<body>
+
+    Quais Projetos você criou ao longo dos anos? <input id="nome" placeholder="cadastre aqui">
+    <button onclick="registrar()">Registrar projeto</button><br><br>
+    <button onclick="mostrar()">Mostrar projeto</button>
+    <div id="exibir"></div>
+    
+</body>
+</html>
+<script>
+    var projetos= [];
+
+function registrar() {
+    projetos.push (nome.value);
+    nome.value = '';
+
+        var iv = projetos.length;
+        var ip = 0;
+        if (iv>0 && iv <= 4) {
+            ip = "Júnior";
+        } else if (iv > 4 && iv <= 12) {
+            ip = `Pleno desde o projeto ${projetos[4]}`
+        } else if (iv > 12) {
+            ip = `Sênior desde o projeto ${projetos[12]}`
+        }
+        exibir.innerHTML = `Você já fez ${iv} projetos. Por isso você é um profissional ${ip} <br>`;
+    };
+
+    function mostrar() {
+
+        for (var index = projetos.length; index>0; index--) {
+            exibir.innerHTML += `index + ". " + ${projetos[index-1]} + <br>`
+        }
+    }
+
+        
+    //     for (var index = projetos.length; index >=0; index--) {
+    //        exibir.innerHTML += `${projetos[index]} <br>`
+    //     }
+
+</script> 
